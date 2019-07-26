@@ -1,7 +1,6 @@
 require 'json'
 require 'http'
 
-
 class GuideBox
     @key = nil
     @base_url = nil

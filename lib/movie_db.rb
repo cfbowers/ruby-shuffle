@@ -8,4 +8,11 @@ class Mdb
         genres = Tmdb::Genre.list["genres"]
         genres.map { |genre| { name: genre["name"], tmdb_id: genre["id"] } }
     end 
+
+    def movies(filters)
+        year
+        genre 
+    
+    end 
+
 end 

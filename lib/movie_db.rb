@@ -6,7 +6,7 @@ class Mdb
 
     def genres
         genres = Tmdb::Genre.list["genres"]
-        genres.map { |genre| { name: genre["name"], tmdb_id: genre["id"] } 
+        genres.map { |genre| { name: genre["name"], tmdb_id: genre["id"] } }
     end
 
 end

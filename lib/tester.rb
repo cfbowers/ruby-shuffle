@@ -1,5 +1,5 @@
 require_relative 'guide_box'
+require_relative 'movie_db'
 
-gb = GuideBox.new
-
-puts gb.get_movies
+movie_db = Mdb.new 
+puts movie_db.genres 

@@ -1947,3 +1947,275 @@ Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for 
 Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for ::1 at 2019-07-31 17:18:23 -0700
 Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for ::1 at 2019-07-31 17:18:27 -0700
 Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for ::1 at 2019-07-31 17:18:28 -0700
+Started GET "/" for ::1 at 2019-08-01 16:33:48 -0700
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (14.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (172.3ms)
+Completed 200 OK in 533ms (Views: 506.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5B%5D%5B%5D=18&commit=shuffle" for ::1 at 2019-08-01 16:36:10 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>[["18"]]}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>[["18"]]}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:36:23 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:36:28 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:36:32 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:36:50 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:37:11 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:37:15 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:37:18 -0700
+Started PUT "/__web_console/repl_sessions/16965cc6b2711f65e571a51c06eb277a" for ::1 at 2019-08-01 16:37:19 -0700
+Started GET "/" for ::1 at 2019-08-01 16:43:26 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 646ms (Views: 57.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 16:44:08 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for :tmdb_id:Symbol
+Did you mean?  tap):
+    1: <%= form_for :movie, url: 'homes/new', method: :get do |f| %>
+    2:   <%= f.fields_for :genres do |g| %>
+    3:     <%= g.collection_check_boxes Genre.all, :tmdb_id, :name, :include_hidden => false %>
+    4:   <% end %>
+    5:   <%= submit_tag 'shuffle' %>
+    6: <% end %>
+  
+app/views/homes/index.html.erb:3:in `block (2 levels) in _app_views_homes_index_html_erb___3181532583777643718_70186456791580'
+app/views/homes/index.html.erb:2:in `block in _app_views_homes_index_html_erb___3181532583777643718_70186456791580'
+app/views/homes/index.html.erb:1:in `_app_views_homes_index_html_erb___3181532583777643718_70186456791580'
+Started GET "/" for ::1 at 2019-08-01 16:44:18 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 287ms (Views: 284.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 16:44:24 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 1351ms (Views: 45.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-01 16:44:45 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 306ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:45:00 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["10752"]}}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/12bb6299710bbdb93aa11d50f503e778" for ::1 at 2019-08-01 16:45:25 -0700
+Started PUT "/__web_console/repl_sessions/12bb6299710bbdb93aa11d50f503e778" for ::1 at 2019-08-01 16:45:41 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:45:51 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:46:10 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:46:23 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:46:28 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:46:34 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:46:40 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:47:04 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:47:10 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:47:16 -0700
+Started PUT "/__web_console/repl_sessions/5af44a1f0c06c913e4f767f7137ba1f8" for ::1 at 2019-08-01 16:47:34 -0700
+Started GET "/" for ::1 at 2019-08-01 16:49:38 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:49:40 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:49:47 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/f7cb3ccb03a146f84acc5afaf65eb1eb" for ::1 at 2019-08-01 16:49:53 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:50:02 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 192ms
+
+
+  
+NameError (undefined local variable or method `movie_genre_array' for #<HomesController:0x00007fab173a92f0>
+Did you mean?  genre_id_array):
+  
+app/controllers/homes_controller.rb:11:in `new'
+Started GET "/" for ::1 at 2019-08-01 16:50:18 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:50:20 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `<' for []:Array
+Did you mean?  <<):
+  
+app/controllers/homes_controller.rb:11:in `new'
+Started GET "/" for ::1 at 2019-08-01 16:50:26 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:50:27 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=><ActionController::Parameters {"genres"=><ActionController::Parameters {"id"=>["16", "35", "878", "53", "10752"]} permitted: false>} permitted: false>, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:12:in `new'
+Started PUT "/__web_console/repl_sessions/b0305e773d0b9058d5642dad97ecfc23" for ::1 at 2019-08-01 16:50:39 -0700
+Started PUT "/__web_console/repl_sessions/b0305e773d0b9058d5642dad97ecfc23" for ::1 at 2019-08-01 16:50:39 -0700
+Started PUT "/__web_console/repl_sessions/b0305e773d0b9058d5642dad97ecfc23" for ::1 at 2019-08-01 16:50:44 -0700
+Started GET "/" for ::1 at 2019-08-01 16:51:01 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:51:02 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=><ActionController::Parameters {"genres"=><ActionController::Parameters {"id"=>["16", "35", "878", "53", "10752"]} permitted: false>} permitted: false>, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:12:in `new'
+Started PUT "/__web_console/repl_sessions/58ba18a47c34ccb9ee50cba182e113a1" for ::1 at 2019-08-01 16:51:06 -0700
+Started PUT "/__web_console/repl_sessions/58ba18a47c34ccb9ee50cba182e113a1" for ::1 at 2019-08-01 16:51:07 -0700
+Started PUT "/__web_console/repl_sessions/58ba18a47c34ccb9ee50cba182e113a1" for ::1 at 2019-08-01 16:51:10 -0700
+Started PUT "/__web_console/repl_sessions/58ba18a47c34ccb9ee50cba182e113a1" for ::1 at 2019-08-01 16:51:11 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:52:11 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=><ActionController::Parameters {"genres"=><ActionController::Parameters {"id"=>["16", "35", "878", "53", "10752"]} permitted: false>} permitted: false>, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:12:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:52:13 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=><ActionController::Parameters {"genres"=><ActionController::Parameters {"id"=>["16", "35", "878", "53", "10752"]} permitted: false>} permitted: false>, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:14:in `new'
+Started PUT "/__web_console/repl_sessions/bfd4926c760566d9a9aa3c38fbe0231c" for ::1 at 2019-08-01 16:52:18 -0700
+Started PUT "/__web_console/repl_sessions/bfd4926c760566d9a9aa3c38fbe0231c" for ::1 at 2019-08-01 16:52:20 -0700
+Started GET "/" for ::1 at 2019-08-01 16:52:36 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 286ms (Views: 279.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:52:39 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 178ms
+
+
+  
+NameError (undefined local variable or method `genre_id_array' for #<HomesController:0x00007fab1db77f08>):
+  
+app/controllers/homes_controller.rb:14:in `new'
+Started GET "/" for ::1 at 2019-08-01 16:52:58 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 57ms (Views: 51.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=878&movie%5Bgenres%5D%5Bid%5D%5B%5D=53&movie%5Bgenres%5D%5Bid%5D%5B%5D=10752&commit=shuffle" for ::1 at 2019-08-01 16:53:00 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["16", "35", "878", "53", "10752"]}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=><ActionController::Parameters {"genres"=><ActionController::Parameters {"id"=>["16", "35", "878", "53", "10752"]} permitted: false>} permitted: false>, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:14:in `new'
+Started PUT "/__web_console/repl_sessions/ac10611b8ffcc9898f23e27140efffa6" for ::1 at 2019-08-01 16:53:03 -0700
+Started PUT "/__web_console/repl_sessions/ac10611b8ffcc9898f23e27140efffa6" for ::1 at 2019-08-01 16:53:05 -0700

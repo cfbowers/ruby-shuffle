@@ -1,6 +1,6 @@
 <%= form_for :movie, url: 'homes/new', method: :get do |f| %>
   <%= f.fields_for :genres do |g| %>
-    <%= g.collection_check_boxes nil, Genre.all, :tmdb_id, :name, :include_hidden => false %>
+    <%= g.collection_check_boxes :id, Genre.all, :tmdb_id, :name, :include_hidden => false %>
   <% end %>
   <%= submit_tag 'shuffle' %>
 <% end %>

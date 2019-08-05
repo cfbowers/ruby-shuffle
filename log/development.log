@@ -1947,3 +1947,1994 @@ Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for 
 Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for ::1 at 2019-07-31 17:18:23 -0700
 Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for ::1 at 2019-07-31 17:18:27 -0700
 Started PUT "/__web_console/repl_sessions/ef9b5e6494a4d5045e64300394fe87a7" for ::1 at 2019-07-31 17:18:28 -0700
+Started GET "/" for ::1 at 2019-08-02 09:55:24 -0700
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (11.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (189.5ms)
+Completed 200 OK in 618ms (Views: 589.5ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 09:58:38 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered homes/index.html.erb within layouts/application (317.9ms)
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `label_tag' for #<ActionView::Helpers::FormBuilder:0x00007f9372427068>
+Did you mean?  label):
+    1: <%= form_for :movie, url: 'homes/new', method: :get do |f| %>
+    2:   <%= f.fields_for :genres do |g| %>
+    3:     <%= g.collection_check_boxes :id, Genre.all, :tmdb_id, :name, :include_hidden => false %>
+    4:     <%= g.label_tag :year %>
+    5:     <%= g.text_field :year %>
+    6:   <% end %>
+    7:   <%= submit_tag 'shuffle' %>
+  
+app/views/homes/index.html.erb:4:in `block (2 levels) in _app_views_homes_index_html_erb__3149090350611077293_70135592322120'
+app/views/homes/index.html.erb:2:in `block in _app_views_homes_index_html_erb__3149090350611077293_70135592322120'
+app/views/homes/index.html.erb:1:in `_app_views_homes_index_html_erb__3149090350611077293_70135592322120'
+Started GET "/" for ::1 at 2019-08-02 09:59:42 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered homes/index.html.erb within layouts/application (405.6ms)
+Completed 500 Internal Server Error in 408ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `label_tag' for #<ActionView::Helpers::FormBuilder:0x00007f9374348f50>
+Did you mean?  label):
+    1: <%= form_for :movie, url: 'homes/new', method: :get do |f| %>
+    2:   <%= f.fields_for :genres do |g| %>
+    3:     <%= g.collection_check_boxes :id, Genre.all, :tmdb_id, :name, :include_hidden => false %>
+    4:     <%= g.label_tag :year %>
+    5:     <%= g.text_field :year %>
+    6:   <% end %>
+    7:   <%= submit_tag 'shuffle' %>
+  
+app/views/homes/index.html.erb:4:in `block (2 levels) in _app_views_homes_index_html_erb__3149090350611077293_70135632915860'
+app/views/homes/index.html.erb:2:in `block in _app_views_homes_index_html_erb__3149090350611077293_70135632915860'
+app/views/homes/index.html.erb:1:in `_app_views_homes_index_html_erb__3149090350611077293_70135632915860'
+Started GET "/" for ::1 at 2019-08-02 09:59:47 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (814.3ms)
+Completed 200 OK in 831ms (Views: 830.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:00:09 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Byear%5D=2002&commit=shuffle" for ::1 at 2019-08-02 10:00:15 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"year"=>"2002"}}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"year"=>"2002"}}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:00:52 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:00:55 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (1617.3ms)
+Completed 200 OK in 1635ms (Views: 1633.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:02:06 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 609ms (Views: 49.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:02:52 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:03:29 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=1988&movie%5Byear_end%5D=2002&commit=shuffle" for ::1 at 2019-08-02 10:03:38 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002"}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:05:08 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered homes/index.html.erb within layouts/application (131.9ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `textarea' for #<ActionView::Helpers::FormBuilder:0x00007f9374467418>
+Did you mean?  text_area):
+     8:     <%= f.label :year_end %><br>
+     9:     <li><%= f.text_field :year_end %></li><br>
+    10:     <%= f.label :keywords %>
+    11:     <li><%= f.textarea :keywords %></li><br>
+    12:     <%= submit_tag 'shuffle' %>
+    13:   <% end %>
+    14: 
+  
+app/views/homes/index.html.erb:11:in `block in _app_views_homes_index_html_erb__3149090350611077293_70135643824380'
+app/views/homes/index.html.erb:2:in `_app_views_homes_index_html_erb__3149090350611077293_70135643824380'
+Started GET "/" for ::1 at 2019-08-02 10:05:16 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:05:31 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:05:41 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=1988&movie%5Byear_end%5D=2002&movie%5Bkeywords%5D=sdfasdf&commit=shuffle" for ::1 at 2019-08-02 10:05:45 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002", "keywords"=>"sdfasdf"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002", "keywords"=>"sdfasdf"}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=1988&movie%5Byear_end%5D=2002&movie%5Bkeywords%5D=baguette%2C+fight%2C+goop&commit=shuffle" for ::1 at 2019-08-02 10:06:00 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002", "keywords"=>"baguette, fight, goop"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002", "keywords"=>"baguette, fight, goop"}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:06:07 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:06:11 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:06:16 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:06:25 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:06:35 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:06:56 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:07:00 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:07:01 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:07:09 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:07:14 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:07:28 -0700
+Started PUT "/__web_console/repl_sessions/f07a19192a24c50b251c561ae8ebf63b" for ::1 at 2019-08-02 10:07:28 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=1988&movie%5Byear_end%5D=2002&movie%5Bkeywords%5D=baguette%2C+fight%2C+goop&commit=shuffle" for ::1 at 2019-08-02 10:12:36 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002", "keywords"=>"baguette, fight, goop"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"1988", "year_end"=>"2002", "keywords"=>"baguette, fight, goop"}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:15:00 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/app/controllers/homes_controller.rb:28: syntax error, unexpected end-of-input):
+  
+app/controllers/homes_controller.rb:28: syntax error, unexpected end-of-input
+Started GET "/" for ::1 at 2019-08-02 10:15:11 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/app/controllers/homes_controller.rb:28: syntax error, unexpected end-of-input):
+  
+app/controllers/homes_controller.rb:28: syntax error, unexpected end-of-input
+Started GET "/" for ::1 at 2019-08-02 10:15:27 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/app/controllers/homes_controller.rb:26: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/homes_controller.rb:26: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2019-08-02 10:15:47 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:15:49 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:17:46 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/4c730c1bb086cdc67dc5f85ea020b87e" for ::1 at 2019-08-02 10:17:50 -0700
+Started PUT "/__web_console/repl_sessions/4c730c1bb086cdc67dc5f85ea020b87e" for ::1 at 2019-08-02 10:17:51 -0700
+Started GET "/" for ::1 at 2019-08-02 10:22:08 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:22:10 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/homes_controller.rb:10:in `new'
+Started PUT "/__web_console/repl_sessions/acb5d679515fcb34c79d7d6c9d9301f7" for ::1 at 2019-08-02 10:22:25 -0700
+Started PUT "/__web_console/repl_sessions/acb5d679515fcb34c79d7d6c9d9301f7" for ::1 at 2019-08-02 10:22:25 -0700
+Started PUT "/__web_console/repl_sessions/acb5d679515fcb34c79d7d6c9d9301f7" for ::1 at 2019-08-02 10:22:42 -0700
+Started PUT "/__web_console/repl_sessions/acb5d679515fcb34c79d7d6c9d9301f7" for ::1 at 2019-08-02 10:22:49 -0700
+Started GET "/" for ::1 at 2019-08-02 10:27:26 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:27:28 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/72a38f3037890c87a271c62346a07b92" for ::1 at 2019-08-02 10:27:43 -0700
+Started PUT "/__web_console/repl_sessions/72a38f3037890c87a271c62346a07b92" for ::1 at 2019-08-02 10:27:50 -0700
+Started PUT "/__web_console/repl_sessions/72a38f3037890c87a271c62346a07b92" for ::1 at 2019-08-02 10:27:50 -0700
+Started GET "/" for ::1 at 2019-08-02 10:28:24 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:28:26 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ("nothing here"):
+  
+app/controllers/homes_controller.rb:12:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=28&movie%5Byear_start%5D=test&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test%0D%0A&commit=shuffle" for ::1 at 2019-08-02 10:28:45 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["28"]}, "year_start"=>"test", "year_end"=>"test", "keywords"=>"test\r\n"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ("nothing here"):
+  
+app/controllers/homes_controller.rb:12:in `new'
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:28:54 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:03 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:04 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:06 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:07 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:09 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:10 -0700
+Started PUT "/__web_console/repl_sessions/80ae0f9136d1a8b3bcf4005ce43e03a9" for ::1 at 2019-08-02 10:29:14 -0700
+Started GET "/" for ::1 at 2019-08-02 10:29:45 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=28&movie%5Byear_start%5D=test&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test%0D%0A&commit=shuffle" for ::1 at 2019-08-02 10:29:47 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["28"]}, "year_start"=>"test", "year_end"=>"test", "keywords"=>"test\r\n"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ("Everything here"):
+  
+app/controllers/homes_controller.rb:10:in `new'
+Started PUT "/__web_console/repl_sessions/272fb1b666b78e95e72f1d1d6d8638b7" for ::1 at 2019-08-02 10:30:44 -0700
+Started PUT "/__web_console/repl_sessions/272fb1b666b78e95e72f1d1d6d8638b7" for ::1 at 2019-08-02 10:30:44 -0700
+Started PUT "/__web_console/repl_sessions/272fb1b666b78e95e72f1d1d6d8638b7" for ::1 at 2019-08-02 10:30:55 -0700
+Started GET "/" for ::1 at 2019-08-02 10:31:03 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=28&movie%5Byear_start%5D=test&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test&commit=shuffle" for ::1 at 2019-08-02 10:31:08 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["28"]}, "year_start"=>"test", "year_end"=>"test", "keywords"=>"test"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ("Everything here"):
+  
+app/controllers/homes_controller.rb:10:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:46:38 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=28&movie%5Byear_start%5D=test&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test&commit=shuffle" for ::1 at 2019-08-02 10:46:39 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["28"]}, "year_start"=>"test", "year_end"=>"test", "keywords"=>"test"}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 38845ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-02 10:47:31 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test&commit=shuffle" for ::1 at 2019-08-02 10:47:32 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"test", "keywords"=>"test"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:13:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:47:56 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test&commit=shuffle" for ::1 at 2019-08-02 10:47:57 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"test", "keywords"=>"test"}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 96624ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-02 10:49:38 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test&commit=shuffle" for ::1 at 2019-08-02 10:49:39 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"test", "keywords"=>"test"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `empty' for "":String
+Did you mean?  empty?):
+  
+app/controllers/homes_controller.rb:26:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:49:54 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=test&movie%5Bkeywords%5D=test&commit=shuffle" for ::1 at 2019-08-02 10:49:56 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"test", "keywords"=>"test"}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 15515ms
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=9648&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=test%2C+push%2C+love%2C+eat%2Cdon%27t%2Cwh&commit=shuffle" for ::1 at 2019-08-02 10:50:50 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["9648"]}, "year_start"=>"", "year_end"=>"", "keywords"=>"test, push, love, eat,don't,wh"}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 31080ms
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=80&movie%5Bgenres%5D%5Bid%5D%5B%5D=9648&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=2000&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:51:46 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["35", "80", "9648", "10749"]}, "year_start"=>"2000", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 21092ms
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-02 10:52:43 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=35&movie%5Bgenres%5D%5Bid%5D%5B%5D=80&movie%5Bgenres%5D%5Bid%5D%5B%5D=9648&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=2000&movie%5Byear_end%5D=d&movie%5Bkeywords%5D=fsdf&commit=shuffle" for ::1 at 2019-08-02 10:52:47 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["35", "80", "9648", "10749"]}, "year_start"=>"2000", "year_end"=>"d", "keywords"=>"fsdf"}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 17445ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=brad+pitt+other+action&commit=shuffle" for ::1 at 2019-08-02 10:53:27 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>"brad pitt other action"}, "commit"=>"shuffle"}
+Completed 406 Not Acceptable in 59526ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-02 10:55:23 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=28&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=9648&movie%5Byear_start%5D=1965&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:55:30 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["28", "12", "9648"]}, "year_start"=>"1965", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `root' for #<HomesController:0x00007f93742b2f00>):
+  
+app/controllers/homes_controller.rb:32:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:55:40 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=28&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=9648&movie%5Byear_start%5D=1965&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:55:42 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["28", "12", "9648"]}, "year_start"=>"1965", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:55:42 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 10:57:20 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/config/routes.rb:6: syntax error, unexpected tIDENTIFIER, expecting end
+  get '/new' as: "homes#new"
+             ^~):
+  
+config/routes.rb:6: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/" for ::1 at 2019-08-02 10:57:49 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/config/routes.rb:6: syntax error, unexpected tIDENTIFIER, expecting end
+  get '/new' to: "homes#new"
+             ^~):
+  
+config/routes.rb:6: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/" for ::1 at 2019-08-02 10:57:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-02 10:57:58 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/config/routes.rb:6: syntax error, unexpected tIDENTIFIER, expecting end
+  get 'new' to: "homes#new"
+            ^~):
+  
+config/routes.rb:6: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/" for ::1 at 2019-08-02 10:58:31 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:58:33 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 10:58:33 -0700
+Processing by HomesController#new as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: movie):
+  
+app/controllers/homes_controller.rb:41:in `movie_params'
+app/controllers/homes_controller.rb:13:in `new'
+Started GET "/" for ::1 at 2019-08-02 10:59:13 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 314ms (Views: 306.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 10:59:16 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 10:59:16 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: movie):
+  
+app/controllers/homes_controller.rb:46:in `movie_params'
+app/controllers/homes_controller.rb:18:in `new'
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:25 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:29 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:38 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:39 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:40 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:50 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:51 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 10:59:58 -0700
+Started PUT "/__web_console/repl_sessions/9e96950d3857a75cb213ea56289a57d5" for ::1 at 2019-08-02 11:00:02 -0700
+Started GET "/" for ::1 at 2019-08-02 11:00:11 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:00:12 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 11:00:13 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: movie):
+  
+app/controllers/homes_controller.rb:46:in `movie_params'
+app/controllers/homes_controller.rb:18:in `new'
+Started GET "/homes/new" for ::1 at 2019-08-02 11:01:01 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: movie):
+  
+app/controllers/homes_controller.rb:46:in `movie_params'
+app/controllers/homes_controller.rb:18:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:01:03 -0700
+  
+SyntaxError (/Users/derekcerretani/Development/ruby-shuffle/app/controllers/homes_controller.rb:48: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/homes_controller.rb:48: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2019-08-02 11:01:12 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:01:15 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 11:01:17 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/homes_controller.rb:14:in `[]'
+app/controllers/homes_controller.rb:14:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:01:32 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:01:34 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 11:01:34 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/homes_controller.rb:14:in `[]'
+app/controllers/homes_controller.rb:14:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:02:16 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:02:19 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 2ms
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 11:02:19 -0700
+Processing by HomesController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:14:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:02:47 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:02:51 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/new
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/new" for ::1 at 2019-08-02 11:02:52 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:17:in `new'
+Started PUT "/__web_console/repl_sessions/38b05fa163f4dcb89537364e1caba03e" for ::1 at 2019-08-02 11:02:56 -0700
+Started PUT "/__web_console/repl_sessions/38b05fa163f4dcb89537364e1caba03e" for ::1 at 2019-08-02 11:02:57 -0700
+Started PUT "/__web_console/repl_sessions/38b05fa163f4dcb89537364e1caba03e" for ::1 at 2019-08-02 11:03:01 -0700
+Started PUT "/__web_console/repl_sessions/38b05fa163f4dcb89537364e1caba03e" for ::1 at 2019-08-02 11:03:01 -0700
+Started GET "/homes/new" for ::1 at 2019-08-02 11:03:27 -0700
+Processing by HomesController#new as HTML
+Redirected to http://localhost:3000/
+Redirected to 
+Completed 500 Internal Server Error in 2ms
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/homes_controller.rb:37:in `new'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:04:55 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 197ms
+
+
+  
+NameError (undefined local variable or method `homes_show' for #<HomesController:0x00007f93742b20f0>
+Did you mean?  homes_show_url):
+  
+app/controllers/homes_controller.rb:37:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:05:16 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:05:19 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:05:19 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:05:36 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:05:36 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:05:38 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 66ms (Views: 62.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:05:39 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:05:39 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:06:07 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:06:07 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:06:09 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:06:10 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:13 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:18 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:18 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:20 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:21 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:27 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:28 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:06:56 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:07:04 -0700
+Started PUT "/__web_console/repl_sessions/5975163a6df6dc3c3fe462b747aa7be8" for ::1 at 2019-08-02 11:07:05 -0700
+Started GET "/" for ::1 at 2019-08-02 11:07:54 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:07:55 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle", "controller"=>"homes", "action"=>"new"} permitted: false>):
+  
+app/controllers/homes_controller.rb:9:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:08:08 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:08:09 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:08:10 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 26.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:08:58 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:09:00 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:09:00 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:09:01 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:09:01 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=&movie%5Byear_end%5D=1998&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:09:45 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"", "year_end"=>"1998", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:09:45 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/2395113861ac1bb19888cc373c90d36d" for ::1 at 2019-08-02 11:10:10 -0700
+Started PUT "/__web_console/repl_sessions/2395113861ac1bb19888cc373c90d36d" for ::1 at 2019-08-02 11:10:12 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:11:44 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:13:in `new'
+Started PUT "/__web_console/repl_sessions/ba647741b51e27a3c4e20c2b0b07a742" for ::1 at 2019-08-02 11:11:47 -0700
+Started PUT "/__web_console/repl_sessions/ba647741b51e27a3c4e20c2b0b07a742" for ::1 at 2019-08-02 11:11:52 -0700
+Started PUT "/__web_console/repl_sessions/ba647741b51e27a3c4e20c2b0b07a742" for ::1 at 2019-08-02 11:11:59 -0700
+Started GET "/" for ::1 at 2019-08-02 11:12:17 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:12:18 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/homes_controller.rb:13:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:12:22 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:12:25 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12"]}, "year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:12:25 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/cdf6c66958bdd2275b21b5a210f085c0" for ::1 at 2019-08-02 11:12:29 -0700
+Started PUT "/__web_console/repl_sessions/cdf6c66958bdd2275b21b5a210f085c0" for ::1 at 2019-08-02 11:12:38 -0700
+Started GET "/" for ::1 at 2019-08-02 11:12:52 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:12:54 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:12:56 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ([12, 16, 10749]):
+  
+app/controllers/homes_controller.rb:21:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:13:34 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:13:36 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 2ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:13:37 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/e417dcf0f340533f8fa5cbebe0903721" for ::1 at 2019-08-02 11:13:40 -0700
+Started PUT "/__web_console/repl_sessions/e417dcf0f340533f8fa5cbebe0903721" for ::1 at 2019-08-02 11:13:41 -0700
+Started PUT "/__web_console/repl_sessions/e417dcf0f340533f8fa5cbebe0903721" for ::1 at 2019-08-02 11:13:57 -0700
+Started GET "/" for ::1 at 2019-08-02 11:14:21 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 32ms (Views: 27.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:14:23 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=&movie%5Byear_end%5D=&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:14:24 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"", "year_end"=>"", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:14:24 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/e32e22005085049f5eeb2b6a14aa76fb" for ::1 at 2019-08-02 11:14:27 -0700
+Started PUT "/__web_console/repl_sessions/e32e22005085049f5eeb2b6a14aa76fb" for ::1 at 2019-08-02 11:14:32 -0700
+Started GET "/" for ::1 at 2019-08-02 11:15:08 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=asdf&commit=shuffle" for ::1 at 2019-08-02 11:15:14 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"asdf"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:15:14 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/c33f4dc757276c1aa6b47a34c9b7d783" for ::1 at 2019-08-02 11:15:18 -0700
+Started PUT "/__web_console/repl_sessions/c33f4dc757276c1aa6b47a34c9b7d783" for ::1 at 2019-08-02 11:15:20 -0700
+Started PUT "/__web_console/repl_sessions/c33f4dc757276c1aa6b47a34c9b7d783" for ::1 at 2019-08-02 11:15:45 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt&commit=shuffle" for ::1 at 2019-08-02 11:15:56 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:15:56 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/bc96aca0529fb1ebb1ec6be32367c1b6" for ::1 at 2019-08-02 11:15:58 -0700
+Started PUT "/__web_console/repl_sessions/bc96aca0529fb1ebb1ec6be32367c1b6" for ::1 at 2019-08-02 11:16:03 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt&commit=shuffle" for ::1 at 2019-08-02 11:16:44 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (["brad pitt"]):
+  
+app/controllers/homes_controller.rb:25:in `new'
+Started GET "/" for ::1 at 2019-08-02 11:17:12 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 66ms (Views: 60.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt&commit=shuffle" for ::1 at 2019-08-02 11:17:14 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 2ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:17:14 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/fe79085b935477c8f17c78e5f7f71348" for ::1 at 2019-08-02 11:17:17 -0700
+Started PUT "/__web_console/repl_sessions/fe79085b935477c8f17c78e5f7f71348" for ::1 at 2019-08-02 11:17:23 -0700
+Started PUT "/__web_console/repl_sessions/fe79085b935477c8f17c78e5f7f71348" for ::1 at 2019-08-02 11:17:39 -0700
+Started PUT "/__web_console/repl_sessions/fe79085b935477c8f17c78e5f7f71348" for ::1 at 2019-08-02 11:17:44 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+something&commit=shuffle" for ::1 at 2019-08-02 11:17:59 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, something"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:17:59 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"homes", "action"=>"show"} permitted: false>):
+  
+app/controllers/homes_controller.rb:40:in `show'
+Started PUT "/__web_console/repl_sessions/55664bda0c34e5550ef59b63613d7771" for ::1 at 2019-08-02 11:18:02 -0700
+Started PUT "/__web_console/repl_sessions/55664bda0c34e5550ef59b63613d7771" for ::1 at 2019-08-02 11:18:06 -0700
+Started GET "/" for ::1 at 2019-08-02 11:18:49 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+something&commit=shuffle" for ::1 at 2019-08-02 11:18:50 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, something"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (["brad pitt", " something"]):
+  
+app/controllers/homes_controller.rb:35:in `new'
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:19:28 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:19:32 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:19:48 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:00 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:04 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:10 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:20 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:22 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:25 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:29 -0700
+Started PUT "/__web_console/repl_sessions/1fd9122bfa6b88c89ba280e643ea2532" for ::1 at 2019-08-02 11:20:36 -0700
+Started GET "/" for ::1 at 2019-08-02 11:21:04 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 53ms (Views: 47.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+something&commit=shuffle" for ::1 at 2019-08-02 11:21:07 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, something"}, "commit"=>"shuffle"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError ([["brad pitt", " something"]]):
+  
+app/controllers/homes_controller.rb:35:in `new'
+Started PUT "/__web_console/repl_sessions/6e015d57bedc1b9dc1437c0e556ce460" for ::1 at 2019-08-02 11:21:11 -0700
+Started PUT "/__web_console/repl_sessions/6e015d57bedc1b9dc1437c0e556ce460" for ::1 at 2019-08-02 11:21:16 -0700
+Started PUT "/__web_console/repl_sessions/6e015d57bedc1b9dc1437c0e556ce460" for ::1 at 2019-08-02 11:21:22 -0700
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+something&commit=shuffle" for ::1 at 2019-08-02 11:24:05 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, something"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:24:05 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:24:40 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+something&commit=shuffle" for ::1 at 2019-08-02 11:24:43 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, something"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:24:43 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (["brad pitt", " something"]):
+  
+app/controllers/homes_controller.rb:41:in `show'
+Started GET "/" for ::1 at 2019-08-02 11:26:15 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Bgenres%5D%5Bid%5D%5B%5D=12&movie%5Bgenres%5D%5Bid%5D%5B%5D=16&movie%5Bgenres%5D%5Bid%5D%5B%5D=10749&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+something&commit=shuffle" for ::1 at 2019-08-02 11:26:18 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"genres"=>{"id"=>["12", "16", "10749"]}, "year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, something"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:26:18 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:27:22 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:27:22 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:27:49 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1392ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:30:25 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 61ms (Views: 54.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:30:27 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:30:27 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-02 11:30:46 -0700
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered homes/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=&commit=shuffle" for ::1 at 2019-08-02 11:30:49 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>""}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:30:49 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError ([]):
+  
+app/controllers/homes_controller.rb:44:in `show'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+action%2C+cell+phones&commit=shuffle" for ::1 at 2019-08-02 11:31:02 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, action, cell phones"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 1ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:31:02 -0700
+Processing by HomesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (["brad pitt", "action", "cell phones"]):
+  
+app/controllers/homes_controller.rb:44:in `show'
+Started GET "/homes/new?utf8=%E2%9C%93&movie%5Byear_start%5D=asdf&movie%5Byear_end%5D=asdf&movie%5Bkeywords%5D=brad+pitt%2C+action%2C+cell+phones&commit=shuffle" for ::1 at 2019-08-02 11:31:13 -0700
+Processing by HomesController#new as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"year_start"=>"asdf", "year_end"=>"asdf", "keywords"=>"brad pitt, action, cell phones"}, "commit"=>"shuffle"}
+Redirected to http://localhost:3000/homes/show
+Completed 302 Found in 2ms
+
+
+Started GET "/homes/show" for ::1 at 2019-08-02 11:31:13 -0700
+Processing by HomesController#show as HTML
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 30.2ms)
+
+

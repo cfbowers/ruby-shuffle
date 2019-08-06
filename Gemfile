@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'http'
 gem 'pry'
+gem 'themoviedb'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

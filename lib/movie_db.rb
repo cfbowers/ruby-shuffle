@@ -14,6 +14,7 @@ def value_exists(object, key)
     end
 end 
 
+
 class Mdb 
     def initialize 
         #cfb's key 
@@ -22,10 +23,10 @@ class Mdb
         Tmdb::Api.key(@key)
     end 
 
-    def genres 
+    def genres
         genres = Tmdb::Genre.list["genres"]
         genres.map { |genre| { name: genre["name"], tmdb_id: genre["id"] } }
-    end 
+    end
 
     def query_movies(filters)
         url = "#{@base_url}/discover/movie?api_key=#{@key}"
@@ -36,9 +37,9 @@ class Mdb
         
         JSON.parse( HTTP.get(url) )
     end 
-
 end 
 
 # This is just to test the file by calling it directly (e.g 'ruby movie_db.rb')
 # mdb = Mdb.new
 # puts mdb.query_movies({ year_start: '1990', year_end: '1991', genres: [12, 53, '28', 878] })
+

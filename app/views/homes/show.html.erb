@@ -1,22 +1,5 @@
 You made it
 
-<br>
+<%= @results[0]['title'] %>
 
-<h3>Keywords:</h3><br>
-<% @keywords.each do |k| %>
-  <%= k %>
-<% end %>
-
-<br>
-
-<h3>Year(s):</h3><br>
-<% @year.each do |y| %>
-  <%= y %>
-<% end %>
-
-<br>
-
-<h3>Genres:</h3><br>
-<% @genres.each do |g| %>
-  <%= g %>
-<% end %>
+<%= image_tag @base %>

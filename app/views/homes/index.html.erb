@@ -1,5 +1,5 @@
 <ul>
-  <%= form_for :movie, url: 'homes/new', method: :get do |f| %>
+  <%= form_for :movie, url: 'homes/show', method: :get do |f| %>
     <li><%= f.collection_check_boxes :genres, Genre.all, :tmdb_id, :name, :include_hidden => false %></li>
     <%= f.label :year_start %><br>
     <li><%= f.text_field :year_start %></li><br>

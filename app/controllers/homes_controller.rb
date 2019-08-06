@@ -6,6 +6,14 @@ class HomesController < ApplicationController
   end
 
   def new
+    if params[:movie][:genres][:id]
+      genre_id_array = []
+      params[:movie][:genres][:id].each do |g|
+        genre_id_array << g.to_i
+      end
+      raise params.inspect
+    else
+      redirect_to root
 
     if (movie_params[:genres].nil?) && (movie_params[:year_start].empty?) && (movie_params[:year_end].empty?) && (movie_params[:keywords].empty?)
       redirect_to root_path

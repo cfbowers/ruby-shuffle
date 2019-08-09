@@ -13,6 +13,7 @@ class HomesController < ApplicationController
 
   def show
     mdb = Mdb.new
+    binding.pry
     @results = mdb.query_movies(movie_params)['results']
     @base = "https://image.tmdb.org/t/p/w500#{@results[0]['backdrop_path']}"
   end

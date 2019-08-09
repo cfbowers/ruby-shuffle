@@ -39,6 +39,7 @@ class Mdb
             json = JSON.parse(object)
             { tmdb_id: json['id'], name: json['name'] }
         end
+        binding.pry
     end
 
     private

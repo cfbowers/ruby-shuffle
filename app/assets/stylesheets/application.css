@@ -81,6 +81,12 @@ input, textarea{
   font-size: 2rem;
 }
 
+li input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+
 input[type=submit] {
   padding: 20px 100px;
 }

@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+.index-list form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-list li {
+  margin: 0.75rem;
+  padding: 5px;
+}
+
+#check-boxes li{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}

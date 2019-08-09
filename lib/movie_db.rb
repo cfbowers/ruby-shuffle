@@ -5,9 +5,6 @@ require 'zlib'
 require 'open-uri'
 # https://github.com/httprb/http
 
-
-
-
 class Mdb 
     def initialize 
         #cfb's key 
@@ -24,21 +21,20 @@ class Mdb
     def query_movies(filters)
         url = "#{@base_url}/discover/movie?api_key=#{@key}"
 
-        url << "&release_date.gte=#{filters[:year_start]}"  if value_exists(filters, :year_start)
-        url << "&release_date.lte=#{filters[:year_end]}"    if value_exists(filters, :year_end)
-        url << "&with_genres=#{filters[:genres].join(',')}" if value_exists(filters, :genres)
-        
-        JSON.parse( HTTP.get(url) )
+        url << "&release_date.gte=#{filters[:year_start]}"      if value_exists(filters, :year_start)
+        url << "&release_date.lte=#{filters[:year_end]}"        if value_exists(filters, :year_end)
+        url << "&with_genres=#{filters[:genres].join(',')}"     if value_exists(filters, :genres)
+        url << "&with_keywords=#{filters[:keywords].join(',')}" if value_exists(filters, :keywords)
+        url
+        # JSON.parse( HTTP.get(url) )
     end 
 
     def keywords 
-        mm_dd_yyy = DateTime.now.strftime('%m_%d_%Y')
-        url = "http://files.tmdb.org/p/exports/keyword_ids_#{mm_dd_yyy}.json.gz"
-        gz = Zlib::GzipReader.new(open(url))
-        gz.read.split("\n").map do |object| 
-            json = JSON.parse(object) 
-            { tmdb_id: json['id'], name: json['name'] }
-        end 
+        export(:keyword)
+    end 
+
+    def people
+        export(:person)
     end 
 
     private 
@@ -53,10 +49,24 @@ class Mdb
         end
     end 
 
+    def export(resource)
+        mm_dd_yyy = DateTime.now.strftime('%m_%d_%Y')
+        url = "http://files.tmdb.org/p/exports/#{resource}_ids_#{mm_dd_yyy}.json.gz"
+        gz = Zlib::GzipReader.new(open(url))
+        gz.read.split("\n").map do |object| 
+            json = JSON.parse(object) 
+            id = json['id']
+            json.delete('id')
+            json[:tmdb_id] = id 
+            json
+        end 
+    end 
+
 end 
 
 # This is just to test the file by calling it directly (e.g 'ruby movie_db.rb')
 # mdb = Mdb.new
-# puts mdb.keywords.count
+# p mdb.people
+# p mdb.people
 # puts mdb.query_movies({ year_start: '1990', year_end: '1991', genres: [12, 53, '28', 878] })
 

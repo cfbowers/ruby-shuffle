@@ -5,13 +5,19 @@
         <li><%= f.collection_check_boxes :genres, Genre.all, :tmdb_id, :name, :include_hidden => false %></li>
       </div>
       <div id="inputs">
-        <%= f.label :year_start %><br>
-        <li class="year"><%= f.text_field :year_start %></li><br>
-        <%= f.label :year_end %><br>
-        <li class="year"><%= f.text_field :year_end %></li><br>
-        <%= f.label :keywords, "Keywords (separate by commas)" %>
-        <li id="keywords"><%= f.text_area :keywords %></li><br>
-        <%= submit_tag 'shuffle' %>
+        <li class="year">
+          <%= f.label :year_start, :class => "labels" %><br>
+          <%= f.text_field :year_start %>
+        </li><br>
+        <li class="year">
+          <%= f.label :year_end, :class => "labels" %><br>
+          <%= f.text_field :year_end %>
+        </li><br>
+        <li id="keywords">
+          <%= f.label :keywords, "Keywords (separate by commas)", :class => "labels" %>
+          <%= f.text_area :keywords %>
+        </li><br>
+        <li><%= submit_tag 'shuffle' %></li>
       </div>
     </div>
   <% end %>

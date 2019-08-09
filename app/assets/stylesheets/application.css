@@ -36,4 +36,39 @@
   display: flex;
   flex-direction: column;
   margin-right: 4rem;
+  align-items: center;
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inputs li {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.labels {
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 4px;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+li input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+
+input[type=submit] {
+  padding: 20px 100px;
 }

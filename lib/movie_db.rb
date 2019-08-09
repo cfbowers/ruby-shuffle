@@ -5,13 +5,14 @@ require 'zlib'
 require 'open-uri'
 # https://github.com/httprb/http
 
-class Mdb 
-    def initialize 
-        #cfb's key 
+
+class Mdb
+    def initialize
+        #cfb's key
         @key = '2b5587ef1330e9d80405c7f1e5c3da96'
-        @base_url = 'https://api.themoviedb.org/3' 
+        @base_url = 'https://api.themoviedb.org/3'
         Tmdb::Api.key(@key)
-    end 
+    end
 
     def genres
         genres = Tmdb::Genre.list["genres"]
@@ -25,8 +26,7 @@ class Mdb
         url << "&release_date.lte=#{filters[:year_end]}"        if value_exists(filters, :year_end)
         url << "&with_genres=#{filters[:genres].join(',')}"     if value_exists(filters, :genres)
         url << "&with_keywords=#{filters[:keywords].join(',')}" if value_exists(filters, :keywords)
-        url
-        # JSON.parse( HTTP.get(url) )
+        JSON.parse( HTTP.get(url) )
     end 
 
     def keywords 
@@ -37,17 +37,17 @@ class Mdb
         export(:person)
     end 
 
-    private 
-    # There is probably a better way of doing this 
+    private
+    # There is probably a better way of doing this
     # Return false if the key does not exist in the object, false if it's an empty string, false if it's an int less than 0
     def value_exists(object, key)
         if (object.has_key?(key))
             value = object[key]
             (value.class == Fixnum) ? (value > 0) : (!value.empty?)
         else
-            false 
+            false
         end
-    end 
+    end
 
     def export(resource)
         mm_dd_yyy = DateTime.now.strftime('%m_%d_%Y')
@@ -64,9 +64,9 @@ class Mdb
 
 end 
 
+
 # This is just to test the file by calling it directly (e.g 'ruby movie_db.rb')
 # mdb = Mdb.new
 # p mdb.people
 # p mdb.people
 # puts mdb.query_movies({ year_start: '1990', year_end: '1991', genres: [12, 53, '28', 878] })
-

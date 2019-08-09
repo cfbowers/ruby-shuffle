@@ -1,5 +1,11 @@
 You made it
 
-<%= @results[0]['title'] %>
+<ul>
+  <% @results.each do |r| %>
+  <% binding.pry %>
+    <li><%= r['title'] %><li>
+  <% end %>
+</ul>
+
 
 <%= image_tag @base %>

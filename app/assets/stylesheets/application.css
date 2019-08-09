@@ -14,6 +14,7 @@
  *= require_self
  */
 
+<<<<<<< HEAD
 body {
   background-color: red;
 }
@@ -26,16 +27,23 @@ h1 {
   margin-bottom: 0;
 }
 
+=======
+>>>>>>> 4238ec0772eb509779808bbf92d84de48f858f82
 .index-list form{
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
+=======
+  margin: 8rem;
+>>>>>>> 4238ec0772eb509779808bbf92d84de48f858f82
 }
 
 .flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
@@ -44,6 +52,11 @@ h1 {
 
 .index-list li {
   display: flex;
+=======
+}
+
+.index-list li {
+>>>>>>> 4238ec0772eb509779808bbf92d84de48f858f82
   margin: 0.75rem;
   padding: 5px;
 }
@@ -52,6 +65,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin-right: 4rem;
+<<<<<<< HEAD
   align-items: center;
 }
 
@@ -81,4 +95,6 @@ input, textarea{
 
 input[type=submit] {
   padding: 20px 100px;
+=======
+>>>>>>> 4238ec0772eb509779808bbf92d84de48f858f82
 }

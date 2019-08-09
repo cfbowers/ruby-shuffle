@@ -8,3 +8,4 @@ require 'movie_db'
 #   Character.create(name: 'Luke', movie: movies.first)
 movie_db = Mdb.new 
 Genre.create(movie_db.genres)
+Keyword.create(movie_db.keywords)

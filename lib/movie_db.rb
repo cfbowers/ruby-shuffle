@@ -1,18 +1,11 @@
 require 'themoviedb'
 require 'http'
 require 'json'
+require 'zlib'
+require 'open-uri'
 # https://github.com/httprb/http
 
-# There is probably a better way of doing this 
-# Return false if the key does not exist in the object, false if it's an empty string, false if it's an int less than 0
-def value_exists(object, key)
-    if (object.has_key?(key))
-        value = object[key]
-        (value.class == Fixnum) ? (value > 0) : (!value.empty?)
-    else
-        false 
-    end
-end 
+
 
 
 class Mdb 
@@ -37,9 +30,33 @@ class Mdb
         
         JSON.parse( HTTP.get(url) )
     end 
+
+    def keywords 
+        mm_dd_yyy = DateTime.now.strftime('%m_%d_%Y')
+        url = "http://files.tmdb.org/p/exports/keyword_ids_#{mm_dd_yyy}.json.gz"
+        gz = Zlib::GzipReader.new(open(url))
+        gz.read.split("\n").map do |object| 
+            json = JSON.parse(object) 
+            { tmdb_id: json['id'], name: json['name'] }
+        end 
+    end 
+
+    private 
+    # There is probably a better way of doing this 
+    # Return false if the key does not exist in the object, false if it's an empty string, false if it's an int less than 0
+    def value_exists(object, key)
+        if (object.has_key?(key))
+            value = object[key]
+            (value.class == Fixnum) ? (value > 0) : (!value.empty?)
+        else
+            false 
+        end
+    end 
+
 end 
 
 # This is just to test the file by calling it directly (e.g 'ruby movie_db.rb')
 # mdb = Mdb.new
+# puts mdb.keywords.count
 # puts mdb.query_movies({ year_start: '1990', year_end: '1991', genres: [12, 53, '28', 878] })
 

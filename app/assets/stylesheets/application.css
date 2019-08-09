@@ -14,18 +14,6 @@
  *= require_self
  */
 
-body {
-  background-color: red;
-}
-
-h1 {
-  font-size: 6rem;
-  text-align: center;
-  color: white;
-  text-shadow: 3px 3px black;
-  margin-bottom: 0;
-}
-
 .index-list form{
   display: flex;
   flex-direction: column;
@@ -37,18 +25,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-shadow: 1px 1px black;
 }
 
 .index-list li {
-  display: flex;
   margin: 0.75rem;
   padding: 5px;
 }
-
 
 #check-boxes li{
   display: flex;
